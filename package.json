@@ -1,21 +1,25 @@
 {
-  "name": "my-vue-app",
+  "name": "bookmarks-quick-search",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "description": "Personal daily bookmark quick search",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/chrome": "^0.0.200",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@types/node": "^18.11.9",
     "@types/react": "^18.0.22",
     "@types/react-dom": "^18.0.7",
     "@vitejs/plugin-react": "^2.2.0",
+    "nodemon": "^2.0.20",
     "typescript": "^4.6.4",
     "vite": "^3.2.0"
   }
