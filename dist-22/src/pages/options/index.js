@@ -1,0 +1,1 @@
+import"../../../assets/js/modulepreload-polyfill.0c213636.js";import{j as n,c as t}from"../../../assets/js/jsx-runtime.a0bf831d.js";const i=()=>n("div",{className:"OptionsContainer",children:"Options"});function r(){const o=document.querySelector("#app-options");if(!o)throw new Error("Can not find AppOptions");t(o).render(n(i,{}))}r();

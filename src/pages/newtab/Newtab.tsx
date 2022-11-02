@@ -1,4 +1,4 @@
-import logo from "@assets/img/logo.svg";
+import logo from "@assets/react.svg";
 import "@pages/newtab/Newtab.css";
 import "@pages/newtab/Newtab.scss";
 
