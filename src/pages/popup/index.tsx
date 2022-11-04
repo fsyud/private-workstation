@@ -1,7 +1,6 @@
 import { createRoot } from "react-dom/client";
 import Popup from "./Popup";
-// import refreshOnUpdate from "virtual:reload-on-update-in-view";
-// refreshOnUpdate("pages/popup");
+import "@pages/popup/index.css";
 
 function pageInit() {
   const AppPopup = document.querySelector("#app-popup");

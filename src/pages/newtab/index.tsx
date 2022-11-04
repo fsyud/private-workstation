@@ -1,9 +1,6 @@
 import { createRoot } from "react-dom/client";
 import Newtab from "./Newtab";
 import "@pages/newtab/index.css";
-// import refreshOnUpdate from "virtual:reload-on-update-in-view";
-
-// refreshOnUpdate("pages/newtab");
 
 function newTabInit() {
   const AppNewTab = document.querySelector("#app-newtab");
