@@ -10,7 +10,7 @@ const manifest: chrome.runtime.ManifestV3 = {
   },
   action: {
     default_popup: "src/pages/popup/index.html",
-    default_icon: "search.png",
+    default_icon: "icon-128.png",
   },
 };
 
