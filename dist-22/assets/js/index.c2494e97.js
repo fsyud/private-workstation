@@ -1,1 +1,0 @@
-import{r as o,j as t,c as n}from"./jsx-runtime.a0bf831d.js";function c(){return o.exports.useEffect(()=>{console.log("content view loaded")},[]),t("div",{className:"content-view",children:"content view! charles test"})}const e=document.createElement("div");e.id="chrome-extension-boilerplate-react-vite-content-view-root";document.body.append(e);n(e).render(t(c,{}));

@@ -1,1 +1,0 @@
-import"../../../assets/js/modulepreload-polyfill.0c213636.js";import{j as n,c as e}from"../../../assets/js/jsx-runtime.a0bf831d.js";const r=()=>n("div",{className:"container",children:n("h1",{children:"Dev Tools Panel"})});function t(){const o=document.querySelector("#app-panel");if(!o)throw new Error("Can not find AppPanel");e(o).render(n(r,{}))}t();
