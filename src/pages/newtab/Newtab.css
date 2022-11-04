@@ -57,17 +57,18 @@
 }
 .prompt {
   max-width: 100%;
-  color: #fff;
 }
 
 .prompt h1 {
   font-size: 3rem;
   display: flex;
   justify-content: center;
+  color: #fff;
 }
 
 .prompt h3 {
   font-size: 2rem;
   display: flex;
-  ustify-content: center;
+  justify-content: center;
+  color: #E0FFFF;
 }

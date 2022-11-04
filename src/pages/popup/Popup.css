@@ -4,15 +4,19 @@
   bottom: 0px;
   left: 0px;
   right: 0px;
-  text-align: center;
   height: 100%;
   padding: 10px;
   background-color: #282c34;
 }
 
 .App-logo {
-  height: 30vmin;
+  height: 10vmin;
   pointer-events: none;
+  margin-bottom: 10px;
+}
+
+.App-link img {
+  height: 8vmin;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -26,13 +30,39 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  position: relative;
+  padding: 0 20px;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.app-input {
+  padding: 6px 11px;
+  width: 85%;
+  display: inline-block;
+  list-style: none;
+  line-height: 1.5715;
+  background-image: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 20px;
+  color: #7828c8;
+  font-size: 18px;
+}
+
+.app-input:focus {
+  outline: none;
+}
+
+.app-footer {
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  padding: 0 20px;
 }
 
 @keyframes App-logo-spin {
