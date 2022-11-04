@@ -1,3 +1,12 @@
 .App {
-  
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: #282c34;
+  display: flex;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  color: white;
 }

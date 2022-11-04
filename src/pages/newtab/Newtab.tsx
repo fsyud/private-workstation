@@ -1,4 +1,4 @@
-import "@pages/newtab/Newtab.css";
+import "./Newtab.css";
 
 const Newtab = () => {
   return (

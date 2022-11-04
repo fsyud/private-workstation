@@ -15,9 +15,25 @@ const manifest: chrome.runtime.ManifestV3 = {
   },
   devtools_page: "src/pages/devtools/index.html",
   background: { service_worker: "src/pages/background/index.js" },
-  chrome_url_overrides: { // 文档替换
+  chrome_url_overrides: {
     newtab: "src/pages/newtab/index.html",
   },
+  web_accessible_resources: [
+    {
+      resources: [
+        "assets/js/*.js",
+        "assets/css/*.css",
+      ],
+      matches: ["*://*/*"],
+    },
+  ],
+  // content_scripts: [
+  //   {
+  //     matches: ["http://*/*", "https://*/*", "<all_urls>"],
+  //     js: ["src/pages/content/index.js"],
+  //     css: ["assets/css/contentStyle.chunk.css"],
+  //   },
+  // ],
 };
 
 export default manifest;
