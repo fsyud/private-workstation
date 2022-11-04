@@ -1,12 +1,73 @@
 .App {
-  min-height: 100vh;
-  min-width: 100vw;
-  background-color: #282c34;
-  display: flex;
+  visibility: visible;
+  margin: 0;
+  overflow-wrap: break-word;
 }
 
-.App-header {
+.background {
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  transition: transform 0.3s ease-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.background-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.apps {
   display: flex;
   flex-direction: column;
   color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 3;
+}
+
+.intro-middle-wrapper {
+  max-width: 100%;
+  padding: 0 40px;
+  position: relative;
+  top: -8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+.prompt {
+  max-width: 100%;
+  color: #fff;
+}
+
+.prompt h1 {
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.prompt h3 {
+  font-size: 2rem;
+  display: flex;
+  ustify-content: center;
 }
