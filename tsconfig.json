@@ -20,6 +20,7 @@
       "@src/*": ["src/*"],
       "@assets/*": ["src/assets/*"],
       "@pages/*": ["src/pages/*"],
+      "@utils/*": ["utils/*"],
     }
   },
   "include": ["src", "utils", "vite.config.ts", "node_modules/@types"]

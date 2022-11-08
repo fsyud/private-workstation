@@ -8,6 +8,7 @@ import manifest from "./manifest";
 const root = resolve(__dirname, "src");
 const assetsDir = resolve(root, "assets");
 const pagesDir = resolve(root, "pages");
+const utils = resolve(__dirname, "utils");
 
 const isDev = process.env.__DEV__ === "true";
 
@@ -18,6 +19,7 @@ export default defineConfig({
       "@src": root,
       "@assets": assetsDir,
       "@pages": pagesDir,
+      "@utils": utils
     },
   },
   plugins: [react(), makeManifest(manifest), customDynamicImport()],

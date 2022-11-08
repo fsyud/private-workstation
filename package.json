@@ -1,7 +1,7 @@
 {
   "name": "bookmarks-quick-search",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "Personal daily bookmark quick search",
   "scripts": {
@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@types/chrome": "^0.0.200",
+    "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

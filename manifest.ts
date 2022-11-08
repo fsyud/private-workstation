@@ -20,13 +20,11 @@ const manifest: chrome.runtime.ManifestV3 = {
   },
   web_accessible_resources: [
     {
-      resources: [
-        "assets/js/*.js",
-        "assets/css/*.css",
-      ],
+      resources: ["assets/js/*.js", "assets/css/*.css"],
       matches: ["*://*/*"],
     },
   ],
+  permissions: ["storage", "bookmarks"],
   // content_scripts: [
   //   {
   //     matches: ["http://*/*", "https://*/*", "<all_urls>"],
