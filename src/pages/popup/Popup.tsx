@@ -1,7 +1,14 @@
+import { useEffect } from "react";
 import logo from "@assets/search.svg";
 import "@pages/popup/Popup.css";
 
 const Popup = () => {
+  useEffect(() => {
+    // chrome.bookmarks.getTree(function (bookmarkArray) {
+    //   console.log(bookmarkArray);
+    // });
+  }, []);
+
   return (
     <div className="App app-light">
       <div className="app-main">
@@ -11,7 +18,7 @@ const Popup = () => {
           </div>
           <input className="app-input" type="text" />
         </header>
-        <main>
+        <main className="bookmarks-list">
           <ul>
             <li>1</li>
             <li>2</li>

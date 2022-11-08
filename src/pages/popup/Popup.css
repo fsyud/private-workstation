@@ -13,7 +13,8 @@
 .app-main {
   display: flex;
   flex-direction: column;
-  padding: 16px 8px;
+  padding: 16px 12px;
+  width: 100%;
 }
 
 .app-header {
@@ -25,7 +26,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 20px;
+  margin-right: 8px;
 }
 
 .app-logo img {
@@ -51,6 +52,23 @@
 
 .app-input:focus {
   outline: none;
+}
+
+.bookmarks-list ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding-left: 0;
+}
+
+.bookmarks-list ul > li {
+  padding: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.bookmarks-list ul > li:hover {
+  font-weight: bold;
 }
 
 .app-footer {
