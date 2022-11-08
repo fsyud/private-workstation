@@ -1,7 +1,7 @@
 {
   "name": "bookmarks-quick-search",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "Personal daily bookmark quick search",
   "scripts": {
