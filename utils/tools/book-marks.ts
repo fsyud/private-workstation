@@ -32,6 +32,9 @@ const getBookMarks = async (): Promise<Bookmark[]> => {
   }
 
   const tree = await chrome.bookmarks.getTree();
+
+  console.log(tree, "tree")
+
   flatTree(tree[0]);
   return result;
 };

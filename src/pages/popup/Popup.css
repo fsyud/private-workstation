@@ -58,6 +58,7 @@
   max-height: 400px;
   max-width: 348px;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .bookmarks-list ul {
