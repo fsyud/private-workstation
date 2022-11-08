@@ -38,7 +38,8 @@ const Popup = () => {
               {bookList.map((item: Bookmark, index: number) => {
                 return (
                   <li key={index}>
-                    <a href={item.url}>{item.title}</a>
+                    <img src={`chrome://favicon/${item.url}`} />
+                    <a>{item.title}</a>
                   </li>
                 );
               })}
