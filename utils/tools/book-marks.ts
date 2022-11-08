@@ -3,7 +3,7 @@ export interface Bookmark extends chrome.bookmarks.BookmarkTreeNode {
   editing: boolean;
 }
 
-const getBookMarks = async (): Promise<any> => {
+const getBookMarks = async (): Promise<Bookmark[]> => {
   let result: Bookmark[] = [];
 
   // 将书签树展开成一维数组

@@ -32,14 +32,20 @@ const Popup = () => {
             autoFocus
           />
         </header>
-        <main className="bookmarks-list">
-          <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-          </ul>
-        </main>
+        {bookList && (
+          <main className="bookmarks-list">
+            <ul>
+              {bookList.map((item: Bookmark, index: number) => {
+                return (
+                  <li key={index}>
+                    <a href={item.url}>{item.title}</a>
+                  </li>
+                );
+              })}
+            </ul>
+          </main>
+        )}
+
         <footer className="app-footer"></footer>
       </div>
     </div>
