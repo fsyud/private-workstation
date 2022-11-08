@@ -36,4 +36,5 @@ const getBookMarks = async (): Promise<Bookmark[]> => {
   return result;
 };
 
+
 export default getBookMarks;
