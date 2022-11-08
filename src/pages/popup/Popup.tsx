@@ -31,7 +31,7 @@ const Popup = () => {
             type="text"
             placeholder="Let's search in bookmarks"
             autoFocus
-            onChange={}
+            onChange={() => {}}
           />
         </header>
         {bookList && (
