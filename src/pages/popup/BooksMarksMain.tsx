@@ -16,9 +16,9 @@ const BooksMarksMain: React.FC<{}> = () => {
     setBookList(BOOKMARKS.slice(0, 100));
   };
 
-  const value = useContext(AppContext);
+  const { inputVal } = useContext(AppContext);
 
-  console.log(value, "value");
+  console.log(inputVal, "inputVal")
 
   return (
     <>

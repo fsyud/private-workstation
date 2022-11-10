@@ -1,12 +1,13 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { AppContext } from "./index";
 import logo from "@assets/search.svg";
 import "@pages/popup/Popup.css";
 
 const Popup = () => {
-  const [value, setValue] = useState<string>();
+  const { setInputVal } = useContext(AppContext);
 
   const handleChange = (e: any): void => {
-    setValue(e.target.value);
+    setInputVal(e.target.value);
   };
 
   return (
