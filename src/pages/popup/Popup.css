@@ -10,16 +10,10 @@
   background-color: #282c34;
 }
 
-.app-main {
-  display: flex;
-  flex-direction: column;
-  padding: 16px 12px;
-  width: 100%;
-}
-
 .app-header {
   display: flex;
   align-items: center;
+  padding: 12px
 }
 
 .app-logo {
@@ -52,46 +46,4 @@
 
 .app-input:focus {
   outline: none;
-}
-
-.bookmarks-list {
-  max-height: 400px;
-  max-width: 348px;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-.bookmarks-list ul {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  padding-left: 0;
-}
-
-.bookmarks-list ul > li {
-  padding: 6px;
-  font-size: 16px;
-  cursor: pointer;
-  width: 100%;
-  display: flex;
-}
-
-.bookmarks-list ul > li a {
-  max-width: 70%;
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.bookmarks-list ul > li:hover {
-  font-weight: bold;
-}
-
-.app-footer {
-  position: absolute;
-  display: flex;
-  bottom: 0;
-  left: 0;
-  padding: 0 6px;
 }

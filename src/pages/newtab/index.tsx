@@ -1,4 +1,4 @@
-import { createRoot } from "react-dom/client";
+import ReactDOM from "react-dom/client";
 import Newtab from "./Newtab";
 import "@pages/newtab/index.css";
 
@@ -7,8 +7,7 @@ function newTabInit() {
   if (!AppNewTab) {
     throw new Error("Can not find AppNewTab");
   }
-  const root = createRoot(AppNewTab);
-  root.render(<Newtab />);
+  ReactDOM.createRoot(AppNewTab).render(<Newtab />);
 }
 
 newTabInit();

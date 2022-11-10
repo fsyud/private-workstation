@@ -1,4 +1,4 @@
-import { createRoot } from "react-dom/client";
+import ReactDOM from "react-dom/client";
 import Options from "./Options";
 import "@pages/options/index.css";
 
@@ -7,8 +7,7 @@ function optionsInit() {
   if (!AppOptions) {
     throw new Error("Can not find AppOptions");
   }
-  const root = createRoot(AppOptions);
-  root.render(<Options />);
+  ReactDOM.createRoot(AppOptions).render(<Options />);
 }
 
 optionsInit();

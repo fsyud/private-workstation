@@ -1,5 +1,4 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
+import ReactDOM from "react-dom/client";
 import Panel from "@pages/panel/Panel";
 import "@pages/panel/index.css";
 
@@ -8,8 +7,8 @@ function init() {
   if (!AppPanel) {
     throw new Error("Can not find AppPanel");
   }
-  const root = createRoot(AppPanel);
-  root.render(<Panel />);
+
+  ReactDOM.createRoot(AppPanel).render(<Panel />);
 }
 
 init();
