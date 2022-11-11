@@ -23,7 +23,7 @@ const MainApp = () => {
 
   const getFocusBookMarks = async () => {
     const BOOKMARKS = await getBookMarks();
-    setBookList(BOOKMARKS.slice(0, 20));
+    setBookList(BOOKMARKS);
   };
 
   const handleChange = (e: any): void => {
@@ -31,16 +31,16 @@ const MainApp = () => {
   };
 
   const SearchList = useMemo(() => {
-    console.log(inputVal, "inputVal");
+    console.log(inputVal, bookList, "bookList");
 
-    console.log(bookList, "bookList");
-
-    if (!inputVal) return bookList;
+    if (!inputVal) {
+      return [];
+    }
 
     return bookList.filter((s) =>
       s.title.toLowerCase().includes(inputVal.toLowerCase())
     );
-  }, [inputVal]);
+  }, [inputVal, bookList]);
 
   return (
     <>
@@ -58,7 +58,12 @@ const MainApp = () => {
       </header>
       {inputVal && SearchList.length > 0 && <SingleLi List={SearchList} />}
 
-      {!inputVal && <SingleLi List={bookList} />}
+      {!inputVal && (
+        <>
+          <SingleLi List={bookList.splice(0, 10)} />
+          <div className="app-more-text">And More...</div>
+        </>
+      )}
     </>
   );
 };
