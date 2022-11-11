@@ -17,7 +17,6 @@ You can quickly search a large number of bookmarks to solve the trouble of too m
 
 ```
 pnpm i
-
 ```
 
 ```
