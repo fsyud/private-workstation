@@ -71,6 +71,8 @@
   cursor: pointer;
   width: 100%;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .bookmarks-list ul > li a {
@@ -81,6 +83,17 @@
   text-overflow: ellipsis;
 }
 
+.list-l {
+  width: 70%;
+}
+
+.bookmarks-list ul > li strong {
+  color: #ccc;
+  font-size: 22px;
+  width: 20%;
+  margin-right: 7%;
+}
+
 .bookmarks-list ul > li:hover {
   font-weight: bold;
 }
@@ -89,4 +102,5 @@
   padding: 12px;
   color: #D1B1F0;
   font-size: 14px;
+  
 }
