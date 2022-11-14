@@ -24,7 +24,7 @@ const manifest: chrome.runtime.ManifestV3 = {
       matches: ["*://*/*"],
     },
   ],
-  permissions: ["storage", "bookmarks"],
+  permissions: ["bookmarks"],
   // content_scripts: [
   //   {
   //     matches: ["http://*/*", "https://*/*", "<all_urls>"],
