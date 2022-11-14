@@ -9,7 +9,7 @@ class Memorandum extends Component {
   }
 
   render() {
-    this.updateLocalStorage();
+    this.useLocalStorage();
 
     return (
       <React.Fragment>
@@ -19,22 +19,24 @@ class Memorandum extends Component {
           ))}
         </ul>
         <form onSubmit={this.handleSubmit}>
-          <input 
+          <input
             id="new-memorandu"
             onChange={this.handleChange}
             value={this.state.text}
             placeholder="What do you need to do?"
           ></input>
-          <button>
-            Add #{this.state.items.length + 1} things
-          </button>
+          <div className="button">
+            <button className="btn btn-blue">Add</button>
+            <button className="btn btn-red" onClick={this.handleClearItems}>Clear</button>
+          </div>
+          
         </form>
       </React.Fragment>
     )
   }
 
   handleChange = (e) => {
-    this.setState({text: e.target.value});
+    this.setState({ text: e.target.value });
   }
 
   handleSubmit = (e) => {
@@ -71,6 +73,14 @@ class Memorandum extends Component {
     if (this.state.items.length - 1 === 0) {
       localStorage.clear();
     }
+  }
+
+  handleClearItems = () => {
+    this.setState({
+      items: [],
+    });
+
+    localStorage.clear();
   }
 
   useLocalStorage = () => {
@@ -116,15 +126,16 @@ const Newtab = () => {
             <h3>So try your best today</h3>
           </div>
           <div className="memorandum">
-            <div className="content-area">
-              <Memorandum />
-            </div>
+            <Memorandum />
           </div>
+
         </div>
+        {/* <div className="intro-lower-right-wrapper">
+        </div> */}
+
       </header>
     </div>
   );
 };
-
 
 export default Newtab;
