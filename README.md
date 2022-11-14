@@ -9,6 +9,16 @@
 You can quickly search a large number of bookmarks to solve the trouble of too many bookmarks
 
 <div align="center">
-  <img width="60%" src="https://user-images.githubusercontent.com/26371465/199943631-10726309-1b47-4640-9410-75919d6c5ffe.png" >
+  <img width="60%" src="https://user-images.githubusercontent.com/26371465/201279638-70534371-aa3b-4d04-8345-aaf914003b74.png" >
 </div>
 
+## Develop locally
+
+
+```
+pnpm i
+```
+
+```
+pnpm dev
+```
