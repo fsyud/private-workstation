@@ -1,6 +1,7 @@
 import "./Newtab.css";
-import * as React from "react";
-import { Component } from "react";
+
+const imgUrl =
+  "https://user-images.githubusercontent.com/26371465/201278743-a00cb617-7911-4977-bbd2-e5fcf7abcc5c.jpg";
 
 const Newtab = () => {
   return (
@@ -9,8 +10,7 @@ const Newtab = () => {
         <div
           className="background-item"
           style={{
-            backgroundImage:
-              'url("https://user-images.githubusercontent.com/26371465/201278743-a00cb617-7911-4977-bbd2-e5fcf7abcc5c.jpg")',
+            backgroundImage: `url(${imgUrl})`,
           }}
         ></div>
       </div>
@@ -21,7 +21,26 @@ const Newtab = () => {
             <h3>So try your best today</h3>
           </div>
           <div className="memorandum">
-            <textarea />
+            <div className="tool-box">
+              <button>
+                <i className="icon-bars"></i>
+              </button>
+
+              <div className="too-box-list">
+                <a className="yellow">
+                  <i className="fa  fa-search" aria-hidden="true"></i>
+                </a>
+                <a className="blue">
+                  <i className="fa fa-calendar" aria-hidden="true"></i>
+                </a>
+                <a className="green">
+                  <i className="fa fa-google" aria-hidden="true"></i>
+                </a>
+                <a className="purple">
+                  <i className="fa fa-map-o" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </header>
