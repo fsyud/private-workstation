@@ -49,7 +49,7 @@
 }
 
 .bookmarks-list {
-  max-height: 405px;
+  max-height: 350px;
   max-width: 356px;
   overflow-y: auto;
   overflow-x: hidden;
