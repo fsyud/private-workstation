@@ -1,6 +1,6 @@
 import "./Newtab.css";
-import * as React from 'react';
-import { Component } from 'react';
+import * as React from "react";
+import { Component } from "react";
 
 const Newtab = () => {
   return (
@@ -21,9 +21,8 @@ const Newtab = () => {
             <h3>So try your best today</h3>
           </div>
           <div className="memorandum">
-            <div>test</div>
+            <textarea />
           </div>
-
         </div>
       </header>
     </div>

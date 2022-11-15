@@ -70,7 +70,7 @@
   font-size: 2rem;
   display: flex;
   justify-content: center;
-  color: #E0FFFF;
+  color: #e0ffff;
 }
 
 .intro-lower-right-wrapper {
@@ -80,4 +80,19 @@
   justify-content: right;
   margin-right: 20em;
   margin-bottom: 20em;
+}
+
+.memorandum textarea {
+  background: transparent;
+  color: #fff;
+  min-width: 300px;
+  min-height: 200px;
+  font-size: 28px;
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+}
+
+.memorandum textarea:focus {
+  outline: none;
 }
