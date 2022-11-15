@@ -1,4 +1,6 @@
 import "./Newtab.css";
+import * as React from 'react';
+import { Component } from 'react';
 
 const Newtab = () => {
   return (
@@ -18,6 +20,10 @@ const Newtab = () => {
             <h1>You are great today</h1>
             <h3>So try your best today</h3>
           </div>
+          <div className="memorandum">
+            <div>test</div>
+          </div>
+
         </div>
       </header>
     </div>

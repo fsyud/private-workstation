@@ -79,7 +79,7 @@ const SingleLi: React.FC<{ List: Bookmark[] }> = (props) => {
                 <img src={`chrome://favicon/${item.url}`} />
                 <a>{item.title}</a>
               </div>
-              <strong>{item.title.substring(0, 3)}</strong>
+              <strong>{item.title.substring(0, 2)}</strong>
             </li>
           );
         })}

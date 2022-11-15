@@ -72,3 +72,12 @@
   justify-content: center;
   color: #E0FFFF;
 }
+
+.intro-lower-right-wrapper {
+  max-width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: right;
+  margin-right: 20em;
+  margin-bottom: 20em;
+}
