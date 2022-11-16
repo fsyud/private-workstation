@@ -103,9 +103,8 @@
 }
 
 .memorandum {
-  min-width: 300px;
-  height: 100px;
-  border: 1px red solid;
+  min-width: 290px;
+  height: 50px;
   position: absolute;
   bottom: 25%;
   right: 10%;
@@ -131,12 +130,7 @@
   display: flex;
 }
 
-.too-box-list {
-  display: flex;
-  justify-content: space-between;
-}
-
-.too-box-list a {
+.btn-common {
   width: 50px;
   height: 50px;
   display: flex;
@@ -144,14 +138,112 @@
   align-items: center;
   border-radius: 50%;
   cursor: pointer;
+  border: none;
 }
 
-.too-box-list a i {
+.btn-common i {
   color: #fff;
   font-size: 16px;
 }
 
-.too-box-list a i:hover {
-  
+.btn-common:hover {
+  text-shadow: 1px 4px 1px #666;
 }
 
+.btn-main {
+  position: absolute;
+  left: 120px;
+  z-index: 100;
+  transform: rotate(0);
+}
+
+.too-box-list {
+  display: flex;
+  justify-content: space-between;
+  border: 1px red solid;
+  position: absolute;
+}
+
+.too-box-list .btn-common {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  transition: 0.2s;
+}
+
+.tool-box-active .too-box-list .btn-common {
+  display: flex;
+}
+
+.tool-box-active .btn-main {
+  transform: rotate(45deg);
+  animation: boxmain;
+  animation-duration: 0.2s;
+}
+
+.tool-box-active .too-box-list .btn-common:nth-child(1) {
+  left: 0;
+  animation: box1;
+  animation-duration: 0.2s;
+}
+
+.tool-box-active .too-box-list .btn-common:nth-child(2) {
+  left: 60px;
+  animation: box2;
+  animation-duration: 0.2s;
+}
+
+.tool-box-active .too-box-list .btn-common:nth-child(3) {
+  left: 180px;
+  animation: box3;
+  animation-duration: 0.2s;
+}
+
+.tool-box-active .too-box-list .btn-common:nth-child(4) {
+  left: 240px;
+  animation: box4;
+  animation-duration: 0.2s;
+}
+
+@keyframes boxmain {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes box1 {
+  from {
+    left: 120px;
+  }
+  to {
+    left: 0px;
+  }
+}
+@keyframes box2 {
+  from {
+    left: 120px;
+  }
+  to {
+    left: 60px;
+  }
+}
+@keyframes box3 {
+  from {
+    left: 120px;
+  }
+  to {
+    left: 180px;
+  }
+}
+@keyframes box4 {
+  from {
+    left: 120px;
+  }
+  to {
+    left: 240px;
+  }
+}

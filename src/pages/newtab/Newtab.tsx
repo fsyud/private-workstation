@@ -1,9 +1,12 @@
+import { useState } from "react";
 import "./Newtab.css";
 
 const imgUrl =
   "https://user-images.githubusercontent.com/26371465/201278743-a00cb617-7911-4977-bbd2-e5fcf7abcc5c.jpg";
 
 const Newtab = () => {
+  const [visible, setVisible] = useState<boolean>(false);
+
   return (
     <div className="App">
       <div className="background">
@@ -21,9 +24,12 @@ const Newtab = () => {
             <h3>So try your best today</h3>
           </div>
           <div className="memorandum">
-            <div className="tool-box">
-              <button className="btn-common">
-                <i className="icon-bars"></i>
+            <div className={`tool-box ${visible && "tool-box-active"}`}>
+              <button
+                className="btn-main btn-common pink"
+                onClick={() => setVisible(!visible)}
+              >
+                <i className="fa fa-plus" aria-hidden="true"></i>
               </button>
 
               <div className="too-box-list">
