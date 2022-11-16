@@ -1,7 +1,6 @@
-
 <div align="center">
   <a href="https://lig-bookmarks.vercel.app/" target="_blank">
-    <img align="center" width="225" src="https://user-images.githubusercontent.com/26371465/199880204-b57b1c9a-d3de-468a-8c79-5de53dc51b00.png">
+    <img align="center" width="150" src="https://user-images.githubusercontent.com/26371465/199880204-b57b1c9a-d3de-468a-8c79-5de53dc51b00.png">
   </a>
   <h1>Chrome bookmarks Quick Search</h1>
 </div>
@@ -14,7 +13,6 @@ You can quickly search a large number of bookmarks to solve the trouble of too m
 
 ## Develop locally
 
-
 ```
 pnpm i
 ```
@@ -22,3 +20,15 @@ pnpm i
 ```
 pnpm dev
 ```
+
+## quistion
+
+"Not allowed to load local resource: chrome://favicon/"
+
+[!https://bugs.chromium.org/p/chromium/issues/detail?id=104102](https://bugs.chromium.org/p/chromium/issues/detail?id=104102)
+
+[!https://github.com/GoogleChrome/developer.chrome.com/issues/1541](https://github.com/GoogleChrome/developer.chrome.com/issues/1541)
+
+> looks like there's no such new API yet.
+
+I didn't write the tag, it will be added in subsequent version updates

@@ -143,9 +143,15 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .too-box-list a i {
   color: #fff;
+  font-size: 16px;
+}
+
+.too-box-list a i:hover {
+  
 }
 

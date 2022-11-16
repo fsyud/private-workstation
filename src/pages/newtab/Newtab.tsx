@@ -22,21 +22,21 @@ const Newtab = () => {
           </div>
           <div className="memorandum">
             <div className="tool-box">
-              <button>
+              <button className="btn-common">
                 <i className="icon-bars"></i>
               </button>
 
               <div className="too-box-list">
-                <a className="yellow">
+                <a className="btn-common yellow">
                   <i className="fa  fa-search" aria-hidden="true"></i>
                 </a>
-                <a className="blue">
+                <a className="btn-common blue">
                   <i className="fa fa-calendar" aria-hidden="true"></i>
                 </a>
-                <a className="green">
+                <a className="btn-common green">
                   <i className="fa fa-google" aria-hidden="true"></i>
                 </a>
-                <a className="purple">
+                <a className="btn-common purple">
                   <i className="fa fa-map-o" aria-hidden="true"></i>
                 </a>
               </div>

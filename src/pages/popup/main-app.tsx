@@ -76,7 +76,7 @@ const SingleLi: React.FC<{ List: Bookmark[] }> = (props) => {
           return (
             <li key={index} onClick={() => window.open(item.url)}>
               <div className="list-l">
-                <img src={`chrome://favicon/${item.url}`} />
+                {/* <img src={`chrome://favicon/${item.url}`} /> */}
                 <a>{item.title}</a>
               </div>
               <strong>{item.title.substring(0, 2)}</strong>
