@@ -32,3 +32,8 @@ pnpm dev
 > looks like there's no such new API yet.
 
 I didn't write the tag, it will be added in subsequent version updates
+
+
+![iShot_2022-11-22_16 41 10](https://user-images.githubusercontent.com/26371465/203266523-c6aa3bb6-8930-4474-872f-27ebf0a8b17e.png)
+
+Finally, you can expand your own new functions here. If you are interested, please participate in the construction.
