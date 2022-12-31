@@ -8,6 +8,8 @@
       {
         "image-alt": "off"
       }
-    ]
+    ],
+    "meta-viewport": "off",
+    "typescript-config/strict": "off"
   }
 }

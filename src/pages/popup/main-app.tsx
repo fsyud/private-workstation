@@ -31,8 +31,6 @@ const MainApp = () => {
   };
 
   const SearchList = useMemo(() => {
-    console.log(inputVal, bookList, "bookList");
-
     if (!inputVal) {
       return [];
     }
