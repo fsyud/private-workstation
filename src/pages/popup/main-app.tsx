@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from "react";
 import "./main-app.css";
 import getBookMarks, { Bookmark } from "@utils/tools/book-marks";
 import _debounce from "lodash/debounce";
-import logo from "@assets/search.svg";
+import logo from "@assets/Search bar_selected.svg";
 
 // 声明Context的数据模型
 interface CountProps {
@@ -49,7 +49,7 @@ const MainApp = () => {
         <input
           className="app-input"
           type="text"
-          placeholder="Let's search in bookmarks"
+          placeholder="search bookmarks"
           autoFocus
           onChange={_debounce(handleChange, 300)}
         />
