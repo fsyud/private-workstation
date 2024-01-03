@@ -40,6 +40,17 @@
   background-repeat: no-repeat;
 }
 
+.weather {
+  position: fixed;
+  right: 50px;
+  top: 50px;
+  z-index: 999;
+}
+
+.weather h2 {
+  color: #fff;
+}
+
 .background-item {
   position: absolute;
   top: 0;
@@ -106,8 +117,8 @@
   min-width: 290px;
   height: 50px;
   position: absolute;
-  bottom: 25%;
-  right: 10%;
+  bottom: 0;
+  right: 0;
   display: flex;
 }
 
@@ -131,8 +142,8 @@
 }
 
 .btn-common {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useLayoutEffect } from "react";
+import TodoList from "./Todo";
 import bg1 from "@assets/bg1.jpg";
 import bg2 from "@assets/bg2.jpg";
 import bg3 from "@assets/bg3.jpg";
 import bg4 from "@assets/bg4.jpg";
-import "./NewTab.css";
+import "./index.css";
 
 // const imgUrl =
 //   "https://user-images.githubusercontent.com/26371465/201278743-a00cb617-7911-4977-bbd2-e5fcf7abcc5c.jpg";
@@ -36,13 +37,10 @@ const NewTab = () => {
   return (
     <div className="App">
       <BgElement imageBackground={imageBackground} />
-      <header className="apps">
-        <div className="intro-middle-wrapper">
-          <div className="prompt">
-            <h1>{statementList[getRandomInt(statementList.length)]}</h1>
-            <h3>So try your best today</h3>
-          </div>
-        </div>
+      <WeatherElement />
+      <TodoList />
+      <main className="apps">
+        <StatementElement statementList={statementList} />
 
         <div className="memorandum">
           <div className={`tool-box ${visible && "tool-box-active"}`}>
@@ -69,12 +67,12 @@ const NewTab = () => {
             </div>
           </div>
         </div>
-      </header>
+      </main>
     </div>
   );
 };
 
-const BgElement = React.memo(function Greeting({
+const BgElement = React.memo(function BgElement({
   imageBackground,
 }: {
   imageBackground: any[];
@@ -89,6 +87,57 @@ const BgElement = React.memo(function Greeting({
           })`,
         }}
       ></div>
+    </div>
+  );
+});
+
+const StatementElement = React.memo(function StatementElement({
+  statementList,
+}: {
+  statementList: any[];
+}) {
+  return (
+    <div className="intro-middle-wrapper">
+      <div className="prompt">
+        <h1>{statementList[getRandomInt(statementList.length)]}</h1>
+        <h3>So try your best today</h3>
+      </div>
+    </div>
+  );
+});
+
+const WeatherElement = React.memo(function StatementElement() {
+  const [weatherInfo, setWeatherInfo] = useState<any>({});
+
+  useLayoutEffect(() => {
+    fetch(`https://restapi.amap.com/v3/weather/weatherInfo?key=2615d67c4f2119376c7f4e672c374057&city=310000
+    `)
+      .then((response) => response.json())
+      .then((data) => {
+        if (data?.info === "OK") {
+          setWeatherInfo(data?.lives?.[0] || []);
+        }
+      });
+  }, []);
+
+  // 获取经纬度
+  // const [lat, setLat] = useState([]);
+  // const [long, setLong] = useState([]);
+  // useEffect(() => {
+  //   navigator.geolocation.getCurrentPosition(function (position: any) {
+  //     setLat(position.coords.latitude);
+  //     setLong(position.coords.longitude);
+  //   });
+  //   console.log("Latitude is:", lat);
+  //   console.log("Longitude is:", long);
+  // }, [lat, long]);
+
+  return (
+    <div className="weather">
+      <h2>
+        {weatherInfo?.city} {`${weatherInfo?.temperature} °C`}{" "}
+        {weatherInfo?.weather}
+      </h2>
     </div>
   );
 });
