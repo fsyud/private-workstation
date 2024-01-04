@@ -72,7 +72,7 @@ const TodoList = React.memo(function StatementElement() {
             <TextField
               id="standard-basic"
               value={inputValue}
-              style={{ width: '90%' }}
+              style={{ width: '76%' }}
               onChange={(e) => setInputValue(e.target.value)}
             />
 
