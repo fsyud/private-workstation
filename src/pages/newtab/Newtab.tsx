@@ -114,17 +114,20 @@ const StatementElement = React.memo(function StatementElement({
     let hh = today.getHours();
     let mm = today.getMinutes();
     let ss = today.getSeconds();
-    const hhTwo = checkTime(hh);
-    const mmTwo = checkTime(mm);
-    const ssTwo = checkTime(ss);
-    setCurrentTime(hhTwo + ":" + mmTwo + ":" + ssTwo);
+    let hhTwo = checkTime(hh);
+    let mmTwo = checkTime(mm);
+    let ssTwo = checkTime(ss);
+
+    setCurrentTime(hh + ":" + mmTwo + ":" + ssTwo);
     clockInstance.current = setTimeout(startTime, 500);
   };
 
   const checkTime = (i: number) => {
     let midTime = "";
-    if (Number(i) < 10) {
+    if (i < 10) {
       midTime = "0" + i;
+    } else {
+      midTime = i + "";
     }
     return midTime;
   };
