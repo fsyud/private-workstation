@@ -10,19 +10,24 @@
   position: absolute;
   width: 400px;
   max-height: 300px;
-
   right: 0px;
-  top: -330px;
+  bottom: 38px;
   background-color: #fff;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
   padding: 12px;
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .todo_main {
   max-height: 265px;
   overflow-y: auto;
+}
+
+.todo_head_img {
+  width: 24px;
+  margin-left: 10px;
 }
 
 .todo_main ul {
@@ -39,15 +44,15 @@
   justify-content: space-between;
 }
 
-.todo_main ul li span {
+.text_normal {
   font-weight: 700;
   font-size: 15px;
   display: flex;
   align-items: center;
 }
 
-.todo_main ul li span input {
-  margin-right: 10px;
+.have_line {
+  text-decoration: line-through;
 }
 
 .todo_footer {
