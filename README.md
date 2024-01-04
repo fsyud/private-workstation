@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://lig-bookmarks.vercel.app/" target="_blank">
-    <img align="center" width="120" src="https://user-images.githubusercontent.com/26371465/199880204-b57b1c9a-d3de-468a-8c79-5de53dc51b00.png">
+    <img align="center" width="120" src="https://github.com/ligdy7/private-workstation/assets/26371465/94c3c624-e347-4da2-96f6-cdd9b59afe55">
   </a>
   <h1>Chrome bookmarks Quick Search</h1>
 </div>
