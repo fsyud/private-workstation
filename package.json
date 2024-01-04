@@ -1,15 +1,16 @@
 {
-  "name": "bookmarks-quick-search",
+  "name": "private-workstation",
   "private": true,
-  "version": "1.0.2",
+  "version": "1.1.0",
   "type": "module",
-  "description": "Personal daily bookmark quick search",
+  "description": "Personal daily bookmark quick search,also add schedule",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@material-ui/core": "^4.12.4",
     "@types/chrome": "^0.0.200",
     "lodash": "^4.17.21",
     "react": "^18.2.0",

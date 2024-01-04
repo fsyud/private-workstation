@@ -1,11 +1,18 @@
 import React, { useState } from "react";
+import Checkbox from "@material-ui/core/Checkbox";
+import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
 import note_icon from "@assets/note.svg";
+import delete_icon from "@assets/delete.svg";
+import storage from "@utils/tools/storage";
 
 import "./../NewTab.css";
 
 const TodoList = React.memo(function StatementElement() {
   const [contentVisible, setContentVisible] = useState<boolean>(false);
-  const [todoList, setTodoList] = useState<any[]>([]);
+  const [todoList, setTodoList] = useState<any[]>(
+    storage.get("TODO_LIST") || []
+  );
   const [inputValue, setInputValue] = useState<string>("");
 
   const handleBtnClick = () => {
@@ -14,15 +21,21 @@ const TodoList = React.memo(function StatementElement() {
 
   const handleAdd = () => {
     setInputValue("");
-    setTodoList([
+
+    const listData = [
       ...todoList,
       ...[{ key: todoList.length - 1, value: inputValue }],
-    ]);
+    ];
+
+    setTodoList(listData);
+
+    storage.set("TODO_LIST", listData);
   };
 
   const handleDelete = (value: number) => {
     const currentList = todoList.filter((s) => s.key !== value);
     setTodoList(currentList);
+    storage.set("TODO_LIST", currentList);
   };
 
   return (
@@ -35,14 +48,19 @@ const TodoList = React.memo(function StatementElement() {
                 return (
                   <li key={s.key}>
                     <span>
-                      <img src={note_icon} alt="error" />
+                      <Checkbox
+                        color="default"
+                        inputProps={{
+                          "aria-label": "checkbox with default color",
+                        }}
+                      />
                       {s.value}
                     </span>
                     <div
                       className="single_btn"
                       onClick={() => handleDelete(s.key)}
                     >
-                      delete
+                      <img src={delete_icon} alt="error" />
                     </div>
                   </li>
                 );
@@ -51,14 +69,16 @@ const TodoList = React.memo(function StatementElement() {
           </div>
 
           <div className="todo_footer">
-            <input
-              type="text"
+            <TextField
+              id="standard-basic"
               value={inputValue}
+              style={{ width: '90%' }}
               onChange={(e) => setInputValue(e.target.value)}
             />
-            <div className="todo_add" onClick={handleAdd}>
+
+            <Button variant="contained" onClick={handleAdd}>
               Add
-            </div>
+            </Button>
           </div>
         </div>
       )}
