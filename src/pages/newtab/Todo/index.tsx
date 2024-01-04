@@ -39,20 +39,17 @@ const TodoList = React.memo(function StatementElement() {
     storage.set("TODO_LIST", currentList);
   };
 
-  const handleChangeChecked = useCallback(
-    (value: boolean, key: number) => {
-      const currentTodoList = _cloneDeep(todoList);
+  const handleChangeChecked = (value: boolean, key: number) => {
+    const currentTodoList = _cloneDeep(todoList);
 
-      currentTodoList.forEach((s) => {
-        if (s.key === key) {
-          s.checked = value;
-        }
-      });
-      setTodoList(currentTodoList);
-      storage.set("TODO_LIST", currentTodoList);
-    },
-    [todoList]
-  );
+    currentTodoList.forEach((s) => {
+      if (s.key === key) {
+        s.checked = value;
+      }
+    });
+    setTodoList(currentTodoList);
+    storage.set("TODO_LIST", currentTodoList);
+  };
 
   return (
     <div className="todo_list">

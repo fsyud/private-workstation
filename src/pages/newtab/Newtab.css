@@ -47,8 +47,17 @@
   z-index: 999;
 }
 
+.time_clock {
+  font-size: 100px;
+  color: #fff;
+  font-weight: 700;
+
+}
+
 .weather h2 {
   color: #fff;
+  font-size: 26px;
+  font-weight: 400;
 }
 
 .background-item {

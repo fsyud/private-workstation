@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect } from "react";
+import React, { useState, useLayoutEffect, useEffect, useRef } from "react";
 import TodoList from "./Todo";
 import bg1 from "@assets/bg1.jpg";
 import bg2 from "@assets/bg2.jpg";
@@ -97,12 +97,63 @@ const StatementElement = React.memo(function StatementElement({
 }: {
   statementList: any[];
 }) {
+  const clockInstance = useRef<any>(null);
+
+  const [currentTime, setCurrentTime] = useState<string>("");
+
+  useEffect(() => {
+    startTime();
+
+    return () => {
+      clockInstance.current = null;
+    };
+  }, []);
+
+  const startTime = () => {
+    const today = new Date();
+    let hh = today.getHours();
+    let mm = today.getMinutes();
+    let ss = today.getSeconds();
+    const hhTwo = checkTime(hh);
+    const mmTwo = checkTime(mm);
+    const ssTwo = checkTime(ss);
+    setCurrentTime(hhTwo + ":" + mmTwo + ":" + ssTwo);
+    clockInstance.current = setTimeout(startTime, 500);
+  };
+
+  const checkTime = (i: number) => {
+    let midTime = "";
+    if (Number(i) < 10) {
+      midTime = "0" + i;
+    }
+    return midTime;
+  };
+
   return (
     <div className="intro-middle-wrapper">
-      <div className="prompt">
-        <h1>{statementList[getRandomInt(statementList.length)]}</h1>
-        <h3>So try your best today</h3>
-      </div>
+      <TimeElement time={currentTime} />
+      <OneStateElement statementList={statementList} />
+    </div>
+  );
+});
+
+const TimeElement = React.memo(function TimeElement({
+  time,
+}: {
+  time: string;
+}) {
+  return <div className="time_clock">{time}</div>;
+});
+
+const OneStateElement = React.memo(function TimeElement({
+  statementList,
+}: {
+  statementList: any[];
+}) {
+  return (
+    <div className="prompt">
+      <h1>{statementList[getRandomInt(statementList.length)]}</h1>
+      <h3>So try your best today</h3>
     </div>
   );
 });
@@ -127,7 +178,7 @@ const WeatherElement = React.memo(function StatementElement() {
   // useEffect(() => {
   //   navigator.geolocation.getCurrentPosition(function (position: any) {
   //     setLat(position.coords.latitude);
-  //     setLong(position.coords.longitude);
+  //     currentDatesetLong(position.coords.longitude);
   //   });
   //   console.log("Latitude is:", lat);
   //   console.log("Longitude is:", long);
