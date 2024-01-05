@@ -5,5 +5,5 @@ export default function App() {
     console.log("content view loaded");
   }, []);
 
-  return <div className="content-view">content view! charles test</div>;
+  return <div className="content-view">content view! dongyu test</div>;
 }

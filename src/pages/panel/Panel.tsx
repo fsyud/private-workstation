@@ -4,7 +4,7 @@ import "@pages/panel/Panel.css";
 const Panel: React.FC = () => {
   return (
     <div className="container">
-      <h1>Dev Tools Panel</h1>
+      <h1>Dev Tools Panel by dy</h1>
     </div>
   );
 };

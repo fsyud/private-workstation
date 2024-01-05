@@ -118,7 +118,7 @@ const StatementElement = React.memo(function StatementElement({
     let mmTwo = checkTime(mm);
     let ssTwo = checkTime(ss);
 
-    setCurrentTime(hh + ":" + mmTwo + ":" + ssTwo);
+    setCurrentTime(hhTwo + ":" + mmTwo + ":" + ssTwo);
     clockInstance.current = setTimeout(startTime, 500);
   };
 

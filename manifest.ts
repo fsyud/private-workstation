@@ -15,6 +15,7 @@ const manifest: chrome.runtime.ManifestV3 = {
   },
   devtools_page: "src/pages/devtools/index.html",
   background: { service_worker: "src/pages/background/index.js" },
+    // background: { service_worker: "background.js" }, 要放在根目录
   chrome_url_overrides: {
     newtab: "src/pages/newtab/index.html",
   },
